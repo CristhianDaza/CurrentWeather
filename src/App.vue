@@ -1,9 +1,6 @@
 <template>
   <div id="app">
-    <h1>Current Weather</h1>
-    <Banner
-      :current="current"
-    />
+    <Banner :current="current" />
   </div>
 </template>
 
@@ -46,4 +43,22 @@ export default {
 </script>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #e1e8f0;
+}
+
+#app {
+  background-color: #fff;
+  border-radius: 25px;
+  margin: 25px auto;
+  max-width: 82%;
+  padding: 25PX;
+}
 </style>
