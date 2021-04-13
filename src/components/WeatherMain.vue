@@ -1,7 +1,7 @@
 <template>
   <div class="weather">
     <div class="main">
-      <img :src="tormenta" :alt="current.weather[0].description" />
+      <img :src="`${images}/${url}`" :alt="current.weather[0].description" />
       <p>{{ current.weather[0].main }}</p>
     </div>
     <div class="temp">
@@ -19,12 +19,60 @@ export default {
   data() {
     return {
       tormenta,
+      images: "http://openweathermap.org/img/wn",
+      url: "",
     };
   },
   computed: {
     tempToCelsius() {
       return this.current.main.temp - 273.15;
     },
+  },
+  methods: {
+    image() {
+      switch (true) {
+        case this.current.weather[0].id >= 200 && this.current.weather[0].id <= 231:
+          this.url = "11d.png";
+          break;
+        case this.current.weather[0].id >= 300 && this.current.weather[0].id <= 321:
+          this.url = "09d.png";
+          break;
+        case this.current.weather[0].id >= 500 && this.current.weather[0].id <= 504:
+          this.url = "10d.png";
+          break;
+        case this.current.weather[0].id == 501:
+        case 511:
+          this.url = "13d.png";
+          break;
+        case this.current.weather[0].id >= 520 && this.current.weather[0].id <= 531:
+          this.url = "09d.png";
+          break;
+        case this.current.weather[0].id >= 600 && this.current.weather[0].id <= 622:
+          this.url = "13d.png";
+          break;
+        case this.current.weather[0].id >= 701 && this.current.weather[0].id <= 781:
+          this.url = "50d.png";
+          break;
+        case this.current.weather[0].id == 800:
+          this.url = "01d.png";
+          break;
+        case this.current.weather[0].id == 801:
+          this.url = "02d.png";
+          break;
+        case this.current.weather[0].id == 802:
+          this.url = "03d.png";
+          break;
+        case this.current.weather[0].id == 803 || this.current.weather[0].id == 804:
+          this.url = "04d.png";
+          break;
+
+        default:
+          break;
+      }
+    },
+  },
+  mounted() {
+    this.image();
   },
 };
 </script>
@@ -56,12 +104,12 @@ export default {
 }
 
 .main img {
-  width: 40px;
+  width: 70px;
 }
 
 .main p {
   font-size: 10px;
-  margin-top: 5px;
+  margin-top: -10px;
 }
 
 .main::after {
