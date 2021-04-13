@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <Banner :current="current" />
-    <WeatherMain :current="current" />
+    <WeatherMain
+      :current="current"
+      :url="url"
+      :description="description"
+    />
   </div>
 </template>
 
@@ -14,6 +18,8 @@ export default {
   data() {
     return {
       current: {},
+      url: "",
+      description: "",
     };
   },
   components: {
@@ -29,6 +35,7 @@ export default {
 
       xhr.addEventListener("load", (data) => {
         this.current = JSON.parse(data.target.response);
+        this.description = this.current.weather[0].description;
       });
 
       xhr.open(
@@ -37,11 +44,58 @@ export default {
       );
 
       xhr.send();
+      
+    },
+    image() {
+      switch (true) {
+        case this.current.weather[0].id >= 200 && this.current.weather[0].id <= 231:
+          this.url = "11d.png";
+          break;
+        case this.current.weather[0].id >= 300 && this.current.weather[0].id <= 321:
+          this.url = "09d.png";
+          break;
+        case this.current.weather[0].id >= 500 && this.current.weather[0].id <= 504:
+          this.url = "10d.png";
+          break;
+        case this.current.weather[0].id == 501:
+          this.url = "10d.png";
+          break;
+        case 511:
+          this.url = "13d.png";
+          break;
+        case this.current.weather[0].id >= 520 && this.current.weather[0].id <= 531:
+          this.url = "09d.png";
+          break;
+        case this.current.weather[0].id >= 600 && this.current.weather[0].id <= 622:
+          this.url = "13d.png";
+          break;
+        case this.current.weather[0].id >= 701 && this.current.weather[0].id <= 781:
+          this.url = "50d.png";
+          break;
+        case this.current.weather[0].id == 800:
+          this.url = "01d.png";
+          break;
+        case this.current.weather[0].id == 801:
+          this.url = "02d.png";
+          break;
+        case this.current.weather[0].id == 802:
+          this.url = "03d.png";
+          break;
+        case this.current.weather[0].id == 803 || this.current.weather[0].id == 804:
+          this.url = "04d.png";
+          break;
+
+        default:
+          break;
+      }
     },
   },
-  mounted() {
+  created() {
     this.currentApi();
   },
+  beforeUpdate() {
+    this.image();
+  }
 };
 </script>
 
