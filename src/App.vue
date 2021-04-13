@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <Banner :current="current" />
+    <WeatherMain :current="current" />
   </div>
 </template>
 
 <script>
 import Banner from "@/components/Banner.vue";
+import WeatherMain from "@/components/WeatherMain.vue";
 
 export default {
   name: "App",
@@ -16,6 +18,7 @@ export default {
   },
   components: {
     Banner,
+    WeatherMain,
   },
   methods: {
     currentApi() {
@@ -60,5 +63,6 @@ body {
   margin: 25px auto;
   max-width: 82%;
   padding: 25PX;
+  position: relative;
 }
 </style>
