@@ -11,14 +11,12 @@
 </template>
 
 <script>
-import tormenta from "@/assets/icons/tormenta.svg";
 
 export default {
   name: "WeatherMain",
   props: ["current"],
   data() {
     return {
-      tormenta,
       images: "http://openweathermap.org/img/wn",
       url: "",
     };
