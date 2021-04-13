@@ -23,7 +23,7 @@ export default {
   },
   computed: {
     tempToCelsius() {
-      return this.current.main.temp - 273, 15;
+      return this.current.main.temp - 273.15;
     },
   },
 };
