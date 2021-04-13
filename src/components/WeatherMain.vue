@@ -1,7 +1,7 @@
 <template>
   <div class="weather">
     <div class="main">
-      <img :src="`http://openweathermap.org/img/wn/${url}`" :alt="description" />
+      <img :src="`http://openweathermap.org/img/wn/${icon}.png`" :alt="description" />
       <p>{{ current.weather[0].main }}</p>
     </div>
     <div class="temp">
@@ -14,7 +14,7 @@
 
 export default {
   name: "WeatherMain",
-  props: ["current", "url", "description"],
+  props: ["current", "description", "icon"],
   data() {
     return {};
   },
