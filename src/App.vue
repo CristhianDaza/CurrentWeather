@@ -1,13 +1,15 @@
 <template>
   <div id="app">
     <h1>Current Weather</h1>
-    <pre>
-      {{current}}
-    </pre>
+    <Banner
+      :current="current"
+    />
   </div>
 </template>
 
 <script>
+import Banner from "@/components/Banner.vue";
+
 export default {
   name: "App",
   data() {
@@ -15,7 +17,9 @@ export default {
       current: {},
     };
   },
-  components: {},
+  components: {
+    Banner,
+  },
   methods: {
     currentApi() {
       const api = "ffd452f7ae40a393bc21cd201b41cc87";
@@ -24,7 +28,7 @@ export default {
       const xhr = new XMLHttpRequest();
 
       xhr.addEventListener("load", (data) => {
-        this.current = JSON.parse(data.target.response)
+        this.current = JSON.parse(data.target.response);
       });
 
       xhr.open(
