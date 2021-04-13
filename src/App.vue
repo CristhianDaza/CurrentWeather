@@ -6,12 +6,16 @@
       :description="description"
       :icon="icon"
     />
+    <section>
+      <Forecast />
+    </section>
   </div>
 </template>
 
 <script>
 import Banner from "@/components/Banner.vue";
 import WeatherMain from "@/components/WeatherMain.vue";
+import Forecast from "@/components/Forecast.vue";
 
 export default {
   name: "App",
@@ -25,11 +29,12 @@ export default {
   components: {
     Banner,
     WeatherMain,
+    Forecast,
   },
   methods: {
     currentApi() {
       const api = "ffd452f7ae40a393bc21cd201b41cc87";
-      const city = "Medellin";
+      const city = "Bogota";
 
       const xhr = new XMLHttpRequest();
 
@@ -74,4 +79,9 @@ body {
   padding: 25PX;
   position: relative;
 }
+
+section {
+  margin: 45px 0 0 20px;
+}
+
 </style>
