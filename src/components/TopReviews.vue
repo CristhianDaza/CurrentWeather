@@ -18,17 +18,37 @@
                 <div class="moreProfile">9+</div>
             </div>
         </div>
-        <div>Imagenes</div>
+        <div class="containerimg">
+            <img class="visitimg medium" src="/art-museum.jpg" alt="Arab Street" />
+            <div class="infoCity">
+                <div class="iconCity">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    role="img"
+                    aria-hidden="true"
+                    class="icon"
+                >
+                    <path :d="mdiMapMarker"></path>
+                </svg>
+                </div>
+                <div class="nameCity">
+                <p>Art Science</p>
+                <p>Museum</p>
+                </div>
+            </div>
+    </div>
     </div>
 </template>
 
 <script>
-import { mdiPlus } from "@mdi/js";
+import { mdiPlus, mdiMapMarker } from "@mdi/js";
 
 export default {
     data() {
         return {
             mdiPlus,
+            mdiMapMarker,
         }
     },
 }
@@ -68,5 +88,9 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .medium {
+        height: 100px;
+        background-size: contain;
     }
 </style>
