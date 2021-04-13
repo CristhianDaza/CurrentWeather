@@ -1,12 +1,20 @@
 <template>
   <div id="app">
     <h1>Current Weather</h1>
+    <pre>
+      {{current}}
+    </pre>
   </div>
 </template>
 
 <script>
 export default {
   name: "App",
+  data() {
+    return {
+      current: {},
+    };
+  },
   components: {},
   methods: {
     currentApi() {
@@ -15,10 +23,8 @@ export default {
 
       const xhr = new XMLHttpRequest();
 
-      xhr.addEventListener("readystatechange", function () {
-        if (this.readyState === 4) {
-          console.log(this.responseText);
-        }
+      xhr.addEventListener("load", (data) => {
+        this.current = JSON.parse(data.target.response)
       });
 
       xhr.open(
