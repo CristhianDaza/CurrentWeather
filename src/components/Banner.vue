@@ -42,10 +42,10 @@ export default {
 }
 
 h1 {
-  margin-top: 20px;
-  margin-left: 5px;
-  font-size: 25px;
-  font-weight: 400;
+  margin-top: 5px;
+  margin-left: 25px;
+  font-size: 20px;
+  font-weight: 800;
 }
 
 .icon {
