@@ -5,7 +5,7 @@
       <p>{{ current.weather[0].main }}</p>
     </div>
     <div class="temp">
-      <p>{{ this.current.main.temp }}<span>°C</span></p>
+      <p>{{ Math.round(this.current.main.temp) }}<span>°C</span></p>
     </div>
   </div>
 </template>
@@ -117,7 +117,7 @@ export default {
 .temp::before {
   content: "";
   background: inherit;
-  height: 30%;
+  height: 10%;
   left: 0;
   position: absolute;
   right: 67px;

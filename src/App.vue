@@ -29,7 +29,7 @@ export default {
   methods: {
     currentApi() {
       const api = "ffd452f7ae40a393bc21cd201b41cc87";
-      const city = "Bogota";
+      const city = "Medellin";
 
       const xhr = new XMLHttpRequest();
 
