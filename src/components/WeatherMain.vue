@@ -5,7 +5,7 @@
       <p>{{ current.weather[0].main }}</p>
     </div>
     <div class="temp">
-      <p>{{ tempToCelsius }}<span>°C</span></p>
+      <p>{{ this.current.main.temp }}<span>°C</span></p>
     </div>
   </div>
 </template>
@@ -17,11 +17,6 @@ export default {
   props: ["current", "url", "description"],
   data() {
     return {};
-  },
-  computed: {
-    tempToCelsius() {
-      return this.current.main.temp - 273.15;
-    },
   },
 };
 </script>
