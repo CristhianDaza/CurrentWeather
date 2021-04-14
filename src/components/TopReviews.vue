@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="containerimg">
-      <img class="visitimg medium" src="/art-museum.jpg" alt="Arab Street" />
+      <img class="visitimg small" src="/art-museum.jpg" alt="Arab Street" />
       <div class="infoCity">
         <div class="iconCity">
           <svg
@@ -36,6 +36,37 @@
           <p>Art Science</p>
           <p>Museum</p>
         </div>
+      </div>
+    </div>
+    <div class="containerimg item2">
+      <img class="visitimg medium" src="/Fountain.jpg" alt="Arab Street" />
+      <div class="infoCity">
+        <div class="iconCity">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            role="img"
+            aria-hidden="true"
+            class="icon"
+          >
+            <path :d="mdiMapMarker"></path>
+          </svg>
+        </div>
+        <div class="nameCity">
+          <p>Fountain</p>
+          <p>of Youth</p>
+        </div>
+      </div>
+      <div class="iconCity add">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          role="img"
+          aria-hidden="true"
+          class="icon"
+        >
+          <path :d="mdiPlus"></path>
+        </svg>
       </div>
     </div>
   </div>
@@ -59,7 +90,7 @@ export default {
   display: flex;
   align-items: center;
   width: 100%;
-  color: #7b66e3;
+  color: #cfced3;
 }
 
 .containerTop svg {
@@ -90,8 +121,31 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.medium {
+.small {
+  width: 200px;
   height: 100px;
   background-size: contain;
+}
+.medium {
+  width: 200px;
+  height: 140px;
+  background-size: contain;
+  position: relative;
+  border-radius: 30px;
+}
+.item2 {
+  margin-top: 10px;
+}
+.add {
+  color: white;
+  position: absolute;
+  background-color: #7b66e3c0;
+  display: flex;
+  top: 0;
+  right: 50px;
+  height: 140px;
+  width: 50px;
+  border-radius: 30px;
+  justify-content: center;
 }
 </style>

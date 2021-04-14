@@ -2,7 +2,7 @@
   <div>
     <h2>Place to <span>Visit</span></h2>
     <div class="containerimg">
-      <img class="visitimg" src="/arab-street.jpg" alt="Arab Street" />
+      <img class="visitimg full" src="/arab-street.jpg" alt="Arab Street" />
       <div class="infoCity">
         <div class="iconCity">
           <svg
@@ -39,7 +39,6 @@ export default {
 
 <style>
 .containerimg {
-  height: 250px;
   width: 250px;
   margin-top: 40px;
 
@@ -72,5 +71,9 @@ export default {
 
 .infoCity {
   display: flex;
+}
+
+.full {
+  height: 250px;
 }
 </style>
