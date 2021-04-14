@@ -2,12 +2,13 @@
   <div class="card">
     <div class="card_title">
       <img
-        :src="`http://openweathermap.org/img/wn/${this.location.weather[0].icon}.png`"
+        v-if="location.weather !== undefined"
+        :src="`http://openweathermap.org/img/wn/${location.weather[0].icon}.png`"
         alt=""
         class="card_title_img"
       />
-      <div class="card_title_temp">
-        {{ Math.round(this.location.main.temp) }}<span>°C</span
+      <div class="card_title_temp" v-if="location.main !== undefined">
+        {{ Math.round(location.main.temp) }}<span>°C</span
         ><span class="divider"></span>
       </div>
       <div class="card_title_info">
@@ -16,13 +17,15 @@
       </div>
     </div>
     <div class="card_description">
-      <div class="card_description_humidity">
-        Humidity {{ this.location.main.humidity }}%
+      <div class="card_description_humidity" v-if="location.main !== undefined">
+        Humidity {{ location.main.humidity }}%
       </div>
-      <div class="card_description_main">
-        {{ this.location.weather[0].main }}
+      <div class="card_description_main" v-if="location.main !== undefined">
+        {{ location.weather[0].main }}
       </div>
-      <div class="card_description_wind">{{ (this.location.wind.speed * 3.6).toFixed(2) }}km/h</div>
+      <div class="card_description_wind" v-if="location.wind !== undefined">
+        {{ (location.wind.speed * 3.6).toFixed(2) }}km/h
+      </div>
     </div>
   </div>
 </template>

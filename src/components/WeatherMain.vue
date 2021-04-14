@@ -2,10 +2,10 @@
   <div class="weather">
     <div class="main">
       <img :src="`http://openweathermap.org/img/wn/${icon}.png`" :alt="description" />
-      <p>{{ current.weather[0].main }}</p>
+      <p v-if="current.weather !== undefined">{{ current.weather[0].main }}</p>
     </div>
     <div class="temp">
-      <p>{{ Math.round(this.current.main.temp) }}<span>°C</span></p>
+      <p v-if="current.main !== undefined">{{ Math.round(current.main.temp) }}<span>°C</span></p>
     </div>
   </div>
 </template>
