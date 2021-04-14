@@ -17,7 +17,7 @@
 import Banner from "@/components/Banner.vue";
 import WeatherMain from "@/components/WeatherMain.vue";
 import Forecast from "@/components/Forecast.vue";
-import Logo from "@/assets/Logo.png";
+import Logo from "@/assets/logo.png";
 
 export default {
   name: "App",
