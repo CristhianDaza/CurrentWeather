@@ -12,7 +12,7 @@
 <style>
     .cardAddLocations {
         width: 250px;
-        border: 1px dashed #707070;
+        border: 1px dashed #c2c2c2;
         display: flex;
         flex-direction: column;
         align-items: center;
