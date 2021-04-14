@@ -1,38 +1,73 @@
 <template>
+<!-- eslint-disable vue/no-use-v-if-with-v-for,vue/no-confusing-v-for-v-if -->
   <div>
     <h2>3 Days <span>Forecast</span></h2>
-    <div class="forest">
+    <div
+      v-for="(forest, index) in result"
+      :key="forest.dt" class="forest"
+      v-if="index < 3"
+    >
       <div class="forest_icon">
-        <img src="https://openweathermap.org/img/wn/04d.png" alt="" />
+        <img
+          :src="`https://openweathermap.org/img/wn/${forest.weather[0].icon}.png`"
+          :alt="forest.weather[0].description"
+        />
       </div>
       <div class="forest_days">
-        <div class="forest_day">Friday</div>
-        <div class="forest_main">Rain</div>
+        <div class="forest_day">{{ moment(forest.dt_txt).format('dddd') }}</div>
+        <div class="forest_main">{{ forest.weather[0].main }}</div>
       </div>
-      <div class="forest_temp">32° / 23°</div>
-    </div>
-    <div class="forest">
-      <div class="forest_icon">
-        <img src="https://openweathermap.org/img/wn/01d.png" alt="" />
-      </div>
-      <div class="forest_days">
-        <div class="forest_day">Saturday</div>
-        <div class="forest_main">Clear</div>
-      </div>
-      <div class="forest_temp">34° / 24°</div>
-    </div>
-    <div class="forest">
-      <div class="forest_icon">
-        <img src="https://openweathermap.org/img/wn/02d.png" alt="" />
-      </div>
-      <div class="forest_days">
-        <div class="forest_day">Sunday</div>
-        <div class="forest_main">Cloudy</div>
-      </div>
-      <div class="forest_temp">31° / 23°</div>
+      <div class="forest_temp">{{ Math.round(forest.main.temp_min) }}° / {{ Math.round(forest.main.temp_max) }}°</div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      forecast: {},
+      result: [],
+    };
+  },
+  methods: {
+    currentApi() {
+      const api = "ffd452f7ae40a393bc21cd201b41cc87";
+      const city = "Bogota";
+      const xhr = new XMLHttpRequest();
+
+      xhr.addEventListener("load", (data) => {
+        this.forecast = JSON.parse(data.target.response);
+        this.forecastDay();
+      });
+
+      xhr.open(
+        "GET",
+        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${api}&units=metric`
+      );
+
+      xhr.send();
+     
+    },
+    forecastDay() {
+      let hash = {}
+      const dayFilter = this.forecast.list.filter(current => {
+        const exists = !hash[this.moment(current.dt_txt).format('ddd')];
+        hash[this.moment(current.dt_txt).format('ddd')] = true;
+        return exists;
+      });
+      dayFilter.forEach(day => {
+        if (this.moment(day.dt_txt).format('ddd') !== this.moment(Date.now()).format('ddd')) {
+          this.result.push(day);
+        }
+      })
+    }
+  },
+  created() {
+    this.currentApi();
+  }
+}
+</script>
 
 <style>
 h2 span {
