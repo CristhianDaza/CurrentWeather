@@ -64,7 +64,7 @@ export default {
 .card {
   border-radius: 25px;
   background: white;
-  width: 200px;
+  width: 250px;
   height: 100px;
   margin-bottom: 15px;
 }
@@ -74,7 +74,7 @@ export default {
 }
 
 .card_title .card_title_img {
-  background: #dce8f4;
+  background: #dde7f6;
   border-radius: 15px;
   width: 70px;
 }
