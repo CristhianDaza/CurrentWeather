@@ -2,25 +2,63 @@
   <div class="card">
     <div class="card_title">
       <img
-        src="http://openweathermap.org/img/wn/04n.png"
+        :src="`http://openweathermap.org/img/wn/${this.location.weather[0].icon}.png`"
         alt=""
         class="card_title_img"
       />
       <div class="card_title_temp">
-        29<span>°C</span><span class="divider"></span>
+        {{ Math.round(this.location.main.temp) }}<span>°C</span
+        ><span class="divider"></span>
       </div>
       <div class="card_title_info">
-        <div class="card_title_info_city">Lyon</div>
-        <div class="card_title_info_country">Francia</div>
+        <div class="card_title_info_city">{{ city }}</div>
+        <div class="card_title_info_country">{{ country }}</div>
       </div>
     </div>
     <div class="card_description">
-      <div class="card_description_humidity">Humidity 64%</div>
-      <div class="card_description_main">West</div>
-      <div class="card_description_wind">0.3km/h</div>
+      <div class="card_description_humidity">
+        Humidity {{ this.location.main.humidity }}%
+      </div>
+      <div class="card_description_main">
+        {{ this.location.weather[0].main }}
+      </div>
+      <div class="card_description_wind">{{ (this.location.wind.speed * 3.6).toFixed(2) }}km/h</div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      location: {},
+    };
+  },
+  props: ["city", "country"],
+  methods: {
+    currentApi() {
+      const api = "ffd452f7ae40a393bc21cd201b41cc87";
+
+      const xhr = new XMLHttpRequest();
+
+      xhr.addEventListener("load", (data) => {
+        this.location = JSON.parse(data.target.response);
+      });
+
+      xhr.open(
+        "GET",
+        `http://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.country}&appid=${api}&units=metric`
+      );
+
+      xhr.send();
+    },
+  },
+
+  created() {
+    this.currentApi();
+  },
+};
+</script>
 
 <style>
 .card {

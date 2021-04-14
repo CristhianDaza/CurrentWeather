@@ -1,22 +1,22 @@
 <template>
-<div class="containerCard">
-  <Location />
-</div>
+  <div class="containerCard">
+    <Location city="Paris" country="Francia" />
+    <Location city="Berliln" country="Alemania" />
+  </div>
 </template>
 
 <script>
-import Location from '@/components/Location.vue'
+import Location from "@/components/Location.vue";
 export default {
-    components: {
-        Location,
-    }
-}
+  components: {
+    Location,
+  },
+};
 </script>
 
 <style>
-    
 .containerCard {
-    position: relative;
-    top: -120px;
+  position: relative;
+  top: -120px;
 }
 </style>
