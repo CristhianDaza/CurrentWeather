@@ -1,10 +1,15 @@
 <template>
-  <div id="app">
-    <Banner :current="current" />
-    <WeatherMain :current="current" :description="description" :icon="icon" />
-    <section>
-      <Forecast />
-    </section>
+  <div>
+    <div class="logo">
+      <img :src="Logo" alt="Logo Web" class="logotipo">
+    </div>
+    <div id="app">
+      <Banner :current="current" />
+      <WeatherMain :current="current" :description="description" :icon="icon" />
+      <section>
+        <Forecast />
+      </section>
+    </div>
   </div>
 </template>
 
@@ -12,6 +17,7 @@
 import Banner from "@/components/Banner.vue";
 import WeatherMain from "@/components/WeatherMain.vue";
 import Forecast from "@/components/Forecast.vue";
+import Logo from '@/assets/Logo.png';
 
 export default {
   name: "App",
@@ -20,6 +26,7 @@ export default {
       current: {},
       description: "",
       icon: "",
+      Logo,
     };
   },
   components: {
@@ -80,6 +87,16 @@ body {
 
 section {
   margin: 45px 0 0 20px;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logotipo {
+  width: 40px;
+  margin: 20px 100px 5px 0;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px){
