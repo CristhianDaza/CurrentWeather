@@ -63,7 +63,7 @@ export default {
 .main::after {
   content: "";
   background: white;
-  height: 30%;
+  height: 31%;
   left: 0;
   position: absolute;
   right: 67px;
@@ -107,11 +107,11 @@ export default {
 .temp::after {
   content: "";
   background: white;
-  height: 15%;
+  height: 14%;
   left: 0;
   position: absolute;
   right: 67px;
-  bottom: 0;
+  bottom: 1px;
   transform: translate(0px, 26px);
   transform-origin: 100% 0;
   border-top-left-radius: 15px;
