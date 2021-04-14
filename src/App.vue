@@ -73,6 +73,9 @@ body {
   max-width: 80%;
   padding: 25px 25px 0 25px;
   position: relative;
+   box-shadow: 20px 20px 100px -13px rgba(0,0,0,0.56);
+  -webkit-box-shadow: 20px 20px 100px -13px rgba(0,0,0,0.56);
+  -moz-box-shadow: 20px 20px 100px -13px rgba(0,0,0,0.56);
 }
 
 section {
