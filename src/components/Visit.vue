@@ -2,7 +2,7 @@
   <div>
     <h2>Place to <span>Visit</span></h2>
     <div class="containerimg">
-      <img class="visitimg full" src="/arab-street.jpg" alt="Arab Street" />
+      <img class="visitimg full imgArab" src="/arab-street.jpg" alt="Arab Street" />
       <div class="infoCity">
         <div class="iconCity">
           <svg
@@ -75,5 +75,11 @@ export default {
 
 .full {
   height: 250px;
+}
+
+.containerimg .imgArab {
+  box-shadow: -13px 46px 133px 5px rgba(0,0,0,0.56);
+  -webkit-box-shadow: -13px 46px 133px 5px rgba(0,0,0,0.56);
+  -moz-box-shadow: -13px 46px 133px 5px rgba(0,0,0,0.56);
 }
 </style>
