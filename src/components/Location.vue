@@ -34,7 +34,7 @@ export default {
       location: {},
     };
   },
-  props: ["city", "country"],
+  props: ["city", "country", "codigo"],
   methods: {
     currentApi() {
       const api = "ffd452f7ae40a393bc21cd201b41cc87";
@@ -47,7 +47,7 @@ export default {
 
       xhr.open(
         "GET",
-        `http://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.country}&appid=${api}&units=metric`
+        `http://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.codigo}&appid=${api}&units=metric`
       );
 
       xhr.send();

@@ -1,7 +1,7 @@
 <template>
   <div class="containerCard">
-    <Location city="Paris" country="Francia" />
-    <Location city="Berlin" country="Alemania" />
+    <Location city="París" country="Francia" codigo="FRA" />
+    <Location city="Medellin" country="Colombia" codigo="CO"/>
     <AddLocations />
   </div>
 </template>
