@@ -50,7 +50,7 @@ export default {
 
       xhr.open(
         "GET",
-        `http://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.codigo}&appid=${api}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.codigo}&appid=${api}&units=metric`
       );
 
       xhr.send();
