@@ -11,7 +11,7 @@
 
 <style>
     .cardAddLocations {
-        width: 250px;
+        width: 260px;
         border: 1px dashed #c2c2c2;
         display: flex;
         flex-direction: column;
@@ -20,7 +20,7 @@
         background-color: white;
     }
     .cardAddLocations .cardAddLocations_img img{
-        width: 250px;
+        width: 200px;
     }
 
     .cardAddLocations .cardAddLocations_button{
