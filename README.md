@@ -1,4 +1,11 @@
-# current-weather
+# Current Weather
+
+## App del Clima
+
+Aplicación web que muestra el clima actual de Bogotá, Medellin y París
+Tambien muestra el pronóstico de los próximos tres días en Bogotá 
+
+_Aplicación web creada para **GradiWeb**_
 
 ## Project setup
 ```
