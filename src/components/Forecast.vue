@@ -3,7 +3,7 @@
     <ForecastDay />
     <Visit />
     <TopReviews />
-    <div class="locations"></div>
+    <Locations />
   </div>
 </template>
 
@@ -11,12 +11,14 @@
 import ForecastDay from "@/components/ForecastDay.vue";
 import Visit from "@/components/Visit.vue";
 import TopReviews from "@/components/TopReviews.vue";
+import Locations from "@/components/Locations.vue";
 
 export default {
   components: {
     ForecastDay,
     Visit,
     TopReviews,
+    Locations,
   },
 };
 </script>
