@@ -9,15 +9,22 @@
     >
       <div class="forest_icon">
         <img
+          v-if="forest.weather !== undefined"
           :src="`https://openweathermap.org/img/wn/${forest.weather[0].icon}.png`"
           :alt="forest.weather[0].description"
         />
       </div>
       <div class="forest_days">
-        <div class="forest_day">{{ moment(forest.dt_txt).format('dddd') }}</div>
-        <div class="forest_main">{{ forest.weather[0].main }}</div>
+        <div class="forest_day" v-if="forest.dt_txt !== undefined">
+          {{ moment(forest.dt_txt).format('dddd') }}
+        </div>
+        <div class="forest_main" v-if="forest.weather !== undefined">
+          {{ forest.weather[0].main }}
+        </div>
       </div>
-      <div class="forest_temp">{{ Math.round(forest.main.temp_min) }}° / {{ Math.round(forest.main.temp_max) }}°</div>
+      <div class="forest_temp" v-if="forest.temp_min !== undefined || forest.main.temp_max !== undefined">
+        {{ Math.round(forest.main.temp_min) }}° / {{ Math.round(forest.main.temp_max) }}°
+      </div>
     </div>
   </div>
 </template>
