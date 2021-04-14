@@ -123,7 +123,7 @@ export default {
 }
 .small {
   width: 200px;
-  height: 100px;
+  height: 90px;
   background-size: contain;
 }
 .medium {
