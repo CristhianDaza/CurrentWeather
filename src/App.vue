@@ -1,11 +1,7 @@
 <template>
   <div id="app">
     <Banner :current="current" />
-    <WeatherMain
-      :current="current"
-      :description="description"
-      :icon="icon"
-    />
+    <WeatherMain :current="current" :description="description" :icon="icon" />
     <section>
       <Forecast />
     </section>
@@ -50,7 +46,6 @@ export default {
       );
 
       xhr.send();
-      
     },
   },
   created() {
@@ -67,7 +62,7 @@ export default {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #e1e8f0;
 }
 
@@ -76,12 +71,11 @@ body {
   border-radius: 25px;
   margin: 25px auto;
   max-width: 82%;
-  padding: 25PX;
+  padding: 25px;
   position: relative;
 }
 
 section {
   margin: 45px 0 0 20px;
 }
-
 </style>
