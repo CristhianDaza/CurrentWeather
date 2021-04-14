@@ -64,7 +64,7 @@ export default {
 .card {
   border-radius: 25px;
   background: white;
-  width: 250px;
+  /* width: 250px; */
   height: 100px;
   margin-bottom: 15px;
   box-shadow: -13px 46px 133px -13px rgba(0,0,0,0.56);

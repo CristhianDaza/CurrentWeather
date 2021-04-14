@@ -122,6 +122,11 @@ section {
   .container {
     justify-content: space-between;
   }
+  .containerimg .imgArab {
+    box-shadow: -13px 46px 133px -13px rgba(0,0,0,0.56);
+    -webkit-box-shadow: -13px 46px 133px -13px rgba(0,0,0,0.56);
+    -moz-box-shadow: -13px 46px 133px -13px rgba(0,0,0,0.56);
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1332px) {
@@ -138,4 +143,5 @@ section {
     right: 50px;
   }
 }
+
 </style>
