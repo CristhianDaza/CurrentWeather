@@ -1,7 +1,7 @@
 <template>
   <div class="weather">
     <div class="main">
-      <img :src="`http://openweathermap.org/img/wn/${icon}.png`" :alt="description" />
+      <img :src="`https://openweathermap.org/img/wn/${icon}.png`" :alt="description" />
       <p v-if="current.weather !== undefined">{{ current.weather[0].main }}</p>
     </div>
     <div class="temp">

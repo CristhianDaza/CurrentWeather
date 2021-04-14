@@ -3,7 +3,7 @@
     <h2>3 Days <span>Forecast</span></h2>
     <div class="forest">
       <div class="forest_icon">
-        <img src="http://openweathermap.org/img/wn/04d.png" alt="" />
+        <img src="https://openweathermap.org/img/wn/04d.png" alt="" />
       </div>
       <div class="forest_days">
         <div class="forest_day">Friday</div>
@@ -13,7 +13,7 @@
     </div>
     <div class="forest">
       <div class="forest_icon">
-        <img src="http://openweathermap.org/img/wn/01d.png" alt="" />
+        <img src="https://openweathermap.org/img/wn/01d.png" alt="" />
       </div>
       <div class="forest_days">
         <div class="forest_day">Saturday</div>
@@ -23,7 +23,7 @@
     </div>
     <div class="forest">
       <div class="forest_icon">
-        <img src="http://openweathermap.org/img/wn/02d.png" alt="" />
+        <img src="https://openweathermap.org/img/wn/02d.png" alt="" />
       </div>
       <div class="forest_days">
         <div class="forest_day">Sunday</div>

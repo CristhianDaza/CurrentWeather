@@ -3,7 +3,7 @@
     <div class="card_title">
       <img
         v-if="location.weather !== undefined"
-        :src="`http://openweathermap.org/img/wn/${location.weather[0].icon}.png`"
+        :src="`https://openweathermap.org/img/wn/${location.weather[0].icon}.png`"
         alt=""
         class="card_title_img"
       />
