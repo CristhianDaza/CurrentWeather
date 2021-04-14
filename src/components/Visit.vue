@@ -78,8 +78,8 @@ export default {
 }
 
 .containerimg .imgArab {
-  box-shadow: -13px 46px 133px 5px rgba(0,0,0,0.56);
-  -webkit-box-shadow: -13px 46px 133px 5px rgba(0,0,0,0.56);
-  -moz-box-shadow: -13px 46px 133px 5px rgba(0,0,0,0.56);
+  box-shadow: 12px 40px 92px -21px rgba(0,0,0,0.66);
+  -webkit-box-shadow: 12px 40px 92px -21px rgba(0,0,0,0.66);
+  -moz-box-shadow: 12px 40px 92px -21px rgba(0,0,0,0.66);
 }
 </style>
