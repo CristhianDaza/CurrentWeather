@@ -70,8 +70,8 @@ body {
   background-color: #fff;
   border-radius: 25px;
   margin: 25px auto;
-  max-width: 82%;
-  padding: 25px;
+  max-width: 80%;
+  padding: 25px 25px 0 25px;
   position: relative;
 }
 

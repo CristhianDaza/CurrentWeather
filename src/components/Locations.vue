@@ -21,5 +21,6 @@ export default {
 .containerCard {
   position: relative;
   top: -120px;
+  right: 50px;
 }
 </style>
