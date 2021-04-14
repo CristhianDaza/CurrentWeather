@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <ForecastDay />
-    <Visit />
-    <TopReviews />
-    <Locations />
+    <ForecastDay class="itemForecast"/>
+    <Visit class="itemForecast"/>
+    <TopReviews class="itemForecast"/>
+    <Locations class="itemForecast"/>
   </div>
 </template>
 
@@ -27,5 +27,6 @@ export default {
 .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 </style>

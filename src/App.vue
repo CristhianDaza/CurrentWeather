@@ -78,4 +78,64 @@ body {
 section {
   margin: 45px 0 0 20px;
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+  #app {
+    max-width: 95%;
+    padding: 10px 10px 0 10px;
+  }
+
+  .weather {
+    top: 95px;
+  }
+
+  .banner h1 {
+    font-size: 40px;
+  }
+
+  .banner h1 .icon {
+    widows: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  .itemForecast {
+    margin-bottom: 50px;
+  }
+
+  .forest {
+    width: 100%;
+  }
+  
+  .containerCard {
+    position: static;
+  }
+
+  .small, .medium {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .add {
+    right: 0;
+  }
+  .container {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1332px) {
+  .containerCard {
+    position: static;
+  }
+  
+  .itemForecast {
+    margin: 10px;
+  }
+}
+@media screen and (min-width: 1333px) and (max-width: 1440px) {
+  .itemForecast {
+    right: 50px;
+  }
+}
 </style>

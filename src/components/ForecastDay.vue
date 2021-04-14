@@ -6,30 +6,30 @@
         <img src="http://openweathermap.org/img/wn/04d.png" alt="" />
       </div>
       <div class="forest_days">
-        <div class="forest_day">Lunes</div>
+        <div class="forest_day">Friday</div>
         <div class="forest_main">Rain</div>
       </div>
-      <div class="forest_temp">23° / 32°</div>
+      <div class="forest_temp">32° / 23°</div>
     </div>
     <div class="forest">
       <div class="forest_icon">
-        <img src="http://openweathermap.org/img/wn/04d.png" alt="" />
+        <img src="http://openweathermap.org/img/wn/01d.png" alt="" />
       </div>
       <div class="forest_days">
-        <div class="forest_day">Lunes</div>
-        <div class="forest_main">Rain</div>
+        <div class="forest_day">Saturday</div>
+        <div class="forest_main">Clear</div>
       </div>
-      <div class="forest_temp">23° / 32°</div>
+      <div class="forest_temp">34° / 24°</div>
     </div>
     <div class="forest">
       <div class="forest_icon">
-        <img src="http://openweathermap.org/img/wn/04d.png" alt="" />
+        <img src="http://openweathermap.org/img/wn/02d.png" alt="" />
       </div>
       <div class="forest_days">
-        <div class="forest_day">Lunes</div>
-        <div class="forest_main">Rain</div>
+        <div class="forest_day">Sunday</div>
+        <div class="forest_main">Cloudy</div>
       </div>
-      <div class="forest_temp">23° / 32°</div>
+      <div class="forest_temp">31° / 23°</div>
     </div>
   </div>
 </template>
@@ -41,6 +41,11 @@ h2 span {
 
 .forest:first-of-type {
   margin-top: 40px;
+}
+
+.forest:first-of-type .forest_temp {
+  background-color: #7b66e3;
+  color: white;
 }
 
 .forest {
