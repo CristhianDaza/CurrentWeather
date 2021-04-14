@@ -1,10 +1,11 @@
 <template>
-<!-- eslint-disable vue/no-use-v-if-with-v-for,vue/no-confusing-v-for-v-if -->
+  <!-- eslint-disable vue/no-use-v-if-with-v-for,vue/no-confusing-v-for-v-if -->
   <div>
     <h2>3 Days <span>Forecast</span></h2>
     <div
       v-for="(forest, index) in result"
-      :key="forest.dt" class="forest"
+      :key="forest.dt"
+      class="forest"
       v-if="index < 3"
     >
       <div class="forest_icon">
@@ -16,14 +17,20 @@
       </div>
       <div class="forest_days">
         <div class="forest_day" v-if="forest.dt_txt !== undefined">
-          {{ moment(forest.dt_txt).format('dddd') }}
+          {{ moment(forest.dt_txt).format("dddd") }}
         </div>
         <div class="forest_main" v-if="forest.weather !== undefined">
           {{ forest.weather[0].main }}
         </div>
       </div>
-      <div class="forest_temp" v-if="forest.temp_min !== undefined || forest.main.temp_max !== undefined">
-        {{ Math.round(forest.main.temp_min) }}° / {{ Math.round(forest.main.temp_max) }}°
+      <div
+        class="forest_temp"
+        v-if="
+          forest.temp_min !== undefined || forest.main.temp_max !== undefined
+        "
+      >
+        {{ Math.round(forest.main.temp_min) }}° /
+        {{ Math.round(forest.main.temp_max) }}°
       </div>
     </div>
   </div>
@@ -54,26 +61,28 @@ export default {
       );
 
       xhr.send();
-     
     },
     forecastDay() {
-      let hash = {}
-      const dayFilter = this.forecast.list.filter(current => {
-        const exists = !hash[this.moment(current.dt_txt).format('ddd')];
-        hash[this.moment(current.dt_txt).format('ddd')] = true;
+      let hash = {};
+      const dayFilter = this.forecast.list.filter((current) => {
+        const exists = !hash[this.moment(current.dt_txt).format("ddd")];
+        hash[this.moment(current.dt_txt).format("ddd")] = true;
         return exists;
       });
-      dayFilter.forEach(day => {
-        if (this.moment(day.dt_txt).format('ddd') !== this.moment(Date.now()).format('ddd')) {
+      dayFilter.forEach((day) => {
+        if (
+          this.moment(day.dt_txt).format("ddd") !==
+          this.moment(Date.now()).format("ddd")
+        ) {
           this.result.push(day);
         }
-      })
-    }
+      });
+    },
   },
   created() {
     this.currentApi();
-  }
-}
+  },
+};
 </script>
 
 <style>

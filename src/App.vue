@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="logo">
-      <img :src="Logo" alt="Logo Web" class="logotipo">
+      <img :src="Logo" alt="Logo Web" class="logotipo" />
     </div>
     <div id="app">
       <Banner :current="current" />
@@ -17,7 +17,7 @@
 import Banner from "@/components/Banner.vue";
 import WeatherMain from "@/components/WeatherMain.vue";
 import Forecast from "@/components/Forecast.vue";
-import Logo from '@/assets/Logo.png';
+import Logo from "@/assets/Logo.png";
 
 export default {
   name: "App",
@@ -80,9 +80,9 @@ body {
   max-width: 80%;
   padding: 25px 25px 0 25px;
   position: relative;
-   box-shadow: 20px 20px 100px -13px rgba(0,0,0,0.56);
-  -webkit-box-shadow: 20px 20px 100px -13px rgba(0,0,0,0.56);
-  -moz-box-shadow: 20px 20px 100px -13px rgba(0,0,0,0.56);
+  box-shadow: 20px 20px 100px -13px rgba(0, 0, 0, 0.56);
+  -webkit-box-shadow: 20px 20px 100px -13px rgba(0, 0, 0, 0.56);
+  -moz-box-shadow: 20px 20px 100px -13px rgba(0, 0, 0, 0.56);
 }
 
 section {
@@ -99,7 +99,7 @@ section {
   margin: 20px 100px 5px 0;
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px){
+@media screen and (min-width: 320px) and (max-width: 767px) {
   #app {
     max-width: 95%;
     padding: 10px 10px 0 10px;
@@ -126,12 +126,13 @@ section {
   .forest {
     width: 100%;
   }
-  
+
   .containerCard {
     position: static;
   }
 
-  .small, .medium {
+  .small,
+  .medium {
     max-width: 100%;
     width: 100%;
   }
@@ -143,9 +144,9 @@ section {
     justify-content: space-between;
   }
   .containerimg .imgArab {
-    box-shadow: -13px 46px 133px -13px rgba(0,0,0,0.56);
-    -webkit-box-shadow: -13px 46px 133px -13px rgba(0,0,0,0.56);
-    -moz-box-shadow: -13px 46px 133px -13px rgba(0,0,0,0.56);
+    box-shadow: -13px 46px 133px -13px rgba(0, 0, 0, 0.56);
+    -webkit-box-shadow: -13px 46px 133px -13px rgba(0, 0, 0, 0.56);
+    -moz-box-shadow: -13px 46px 133px -13px rgba(0, 0, 0, 0.56);
   }
 }
 
@@ -153,7 +154,7 @@ section {
   .containerCard {
     position: static;
   }
-  
+
   .itemForecast {
     margin: 10px;
   }
@@ -163,5 +164,4 @@ section {
     right: 50px;
   }
 }
-
 </style>

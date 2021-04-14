@@ -1,17 +1,21 @@
 <template>
   <div class="weather">
     <div class="main">
-      <img :src="`https://openweathermap.org/img/wn/${icon}.png`" :alt="description" />
+      <img
+        :src="`https://openweathermap.org/img/wn/${icon}.png`"
+        :alt="description"
+      />
       <p v-if="current.weather !== undefined">{{ current.weather[0].main }}</p>
     </div>
     <div class="temp">
-      <p v-if="current.main !== undefined">{{ Math.round(current.main.temp) }}<span>°C</span></p>
+      <p v-if="current.main !== undefined">
+        {{ Math.round(current.main.temp) }}<span>°C</span>
+      </p>
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
   name: "WeatherMain",
   props: ["current", "description", "icon"],

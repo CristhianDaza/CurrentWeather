@@ -1,7 +1,7 @@
 <template>
   <div class="containerCard">
     <Location city="París" country="Francia" codigo="FRA" />
-    <Location city="Medellin" country="Colombia" codigo="CO"/>
+    <Location city="Medellin" country="Colombia" codigo="CO" />
     <AddLocations />
   </div>
 </template>
@@ -12,7 +12,7 @@ import AddLocations from "@/components/AddLocations.vue";
 export default {
   components: {
     Location,
-    AddLocations
+    AddLocations,
   },
 };
 </script>

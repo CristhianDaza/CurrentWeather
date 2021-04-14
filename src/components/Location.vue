@@ -70,9 +70,9 @@ export default {
   /* width: 250px; */
   height: 100px;
   margin-bottom: 15px;
-  box-shadow: -13px 46px 133px -13px rgba(0,0,0,0.56);
-  -webkit-box-shadow: -13px 46px 133px -13px rgba(0,0,0,0.56);
-  -moz-box-shadow: -13px 46px 133px -13px rgba(0,0,0,0.56);
+  box-shadow: -13px 46px 133px -13px rgba(0, 0, 0, 0.56);
+  -webkit-box-shadow: -13px 46px 133px -13px rgba(0, 0, 0, 0.56);
+  -moz-box-shadow: -13px 46px 133px -13px rgba(0, 0, 0, 0.56);
 }
 .card .card_title {
   display: flex;

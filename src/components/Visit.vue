@@ -2,7 +2,11 @@
   <div>
     <h2>Place to <span>Visit</span></h2>
     <div class="containerimg">
-      <img class="visitimg full imgArab" src="/arab-street.jpg" alt="Arab Street" />
+      <img
+        class="visitimg full imgArab"
+        src="/arab-street.jpg"
+        alt="Arab Street"
+      />
       <div class="infoCity">
         <div class="iconCity">
           <svg
@@ -35,7 +39,6 @@ export default {
   },
 };
 </script>
-
 
 <style>
 .containerimg {
@@ -78,8 +81,8 @@ export default {
 }
 
 .containerimg .imgArab {
-  box-shadow: 12px 40px 92px -21px rgba(0,0,0,0.66);
-  -webkit-box-shadow: 12px 40px 92px -21px rgba(0,0,0,0.66);
-  -moz-box-shadow: 12px 40px 92px -21px rgba(0,0,0,0.66);
+  box-shadow: 12px 40px 92px -21px rgba(0, 0, 0, 0.66);
+  -webkit-box-shadow: 12px 40px 92px -21px rgba(0, 0, 0, 0.66);
+  -moz-box-shadow: 12px 40px 92px -21px rgba(0, 0, 0, 0.66);
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <ForecastDay class="itemForecast"/>
-    <Visit class="itemForecast"/>
-    <TopReviews class="itemForecast"/>
-    <Locations class="itemForecast"/>
+    <ForecastDay class="itemForecast" />
+    <Visit class="itemForecast" />
+    <TopReviews class="itemForecast" />
+    <Locations class="itemForecast" />
   </div>
 </template>
 
